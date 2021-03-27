@@ -25,6 +25,7 @@ Again, you must pick one (2 or 4) and be consistent.
 
 As is the standard JavaScript practice, put the opening brace of a block of code
 at the end of the line after which it starts.
+You probably won't have problems with this unless you're coming from C# or another language where the other way is common.
 
 ```js
 // no
@@ -38,6 +39,15 @@ if (x) {
   ...
 }
 ```
+
+-------------------------------------------------------------------------------
+### Naming Conventions
+
+#### **Variables**
+
+
+
+
 
 
 -------------------------------------------------------------------------------
@@ -69,6 +79,27 @@ if (x.toString() === '3') { ... }
 
 
 #### **Spacing**
+
+`if`, space, condition, space, brace. The spaces are important.
+
+Also, make sure `else` (or `else if`) statements are on the same line as the braces they are between.
+
+```js
+// no
+if(x) {
+  // ...
+}
+else {
+  // ...
+}
+
+// yes
+if (x) {
+  // ...
+} else {
+  // ...
+}
+```
 
 
 
