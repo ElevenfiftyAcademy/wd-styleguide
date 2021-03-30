@@ -43,11 +43,44 @@ if (x) {
 -------------------------------------------------------------------------------
 ### Naming Conventions
 
-#### **Variables**
+
+#### **Files**
 
 
 
+#### **Variable content**
 
+Your variables should describe the content they hold.
+
+```js
+// no
+let [x, y, z] = ["Toyota", "Camry", 2008]
+
+// yes
+let [make, model, year] = ["Toyota", "Camry", 2008]
+```
+
+#### **Casing**
+
+Variable names should be `camelCase`.
+
+Exception: classes and React components should be `PascalCase`.
+
+```js
+// no
+let var_one = 4
+let VARTWO = 'banana'
+class myClass {
+  // ...
+}
+
+// yes
+let varOne = 4
+let varTwo = 'banana'
+class MyClass {
+  // ...
+}
+```
 
 
 -------------------------------------------------------------------------------
@@ -68,7 +101,10 @@ if (x === '3') { ... }
 if (x.toString() === '3') { ... }
 ```
 
+#### **Prefer const**
 
+If you don't need to reassign a variable, you should use `const` to declare it.
+You would be surprised how little you need to reassign variables.
 
 
 
@@ -125,6 +161,9 @@ x ? x : 0
 x || 0
 ```
 
+-------------------------------------------------------------------------------
+### Loops
+
 
 
 
@@ -150,4 +189,26 @@ x || 0
 
 
 
-***any* typing**
+#### **`any` typing**
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+## React
+
+#### **Component naming**
+
+Components should be named with `PascalCase` (even if they are functions).
+
+#### **
+
+
+### Organization
+
+#### **Nothing below `return`**
+
+#### **Nothing below `render ()`**
