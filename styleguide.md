@@ -1,8 +1,8 @@
 # EFA WD Styleguide
 
 In this document you will find:
-- mostly rules (❗),
-- some rules that amount to "pick one option and be consistent" (❓⁉️), and
+- mostly rules (❗ or ‼️),
+- some rules that amount to "pick one option and be consistent" (⁉️), and
 - a few suggestions (🔶).
 
 
@@ -11,32 +11,32 @@ In this document you will find:
 
 ### General Syntax
 
-#### **Semicolons**
+#### **⁉️ Semicolons**
 
 Semicolons are your choice but stick with said choice. Use them or don't; *consistency* is the important thing.
 
 
-#### **Single vs. double quotes**
+#### **⁉️ Single vs. double quotes**
 
 Like semicolons, choose one and stick to it.
 ***However***, note that specific contexts (like JSX) may have their own rules,
 which should take precedence.
 
 
-#### **Indentation**
+#### **⁉️ Indentation**
 
 Use two *or* four spaces. Note: **spaces**. I.e. not tabs. (VS Code should come configured for this already.)
 Again, you must pick one (2 or 4) and be consistent.
 
 
-#### **Line length**
+#### **❗ Line length**
 
 The traditional line length for most languages is 80 characters.
 Although modern monitors often provide for more than this, 80 is a good default
 especially in an environment when you will be sharing your screen and potentially enlarging your coding font.
 
 
-#### **Brace positioning**
+#### **❗ Brace positioning**
 
 As is the standard JavaScript practice, put the opening brace of a block of code
 at the end of the line after which it starts.
@@ -64,7 +64,7 @@ if (x) {
 
 
 
-#### **Variable content**
+#### **❗ Variable content**
 
 Your variables should describe the content they hold.
 
@@ -77,7 +77,7 @@ let [make, model, year] = ["Tesla", "Cybertruck", 2022]
 ```
 
 
-#### **Casing**
+#### **❗ Casing**
 
 Variable names should be `camelCase`.
 
