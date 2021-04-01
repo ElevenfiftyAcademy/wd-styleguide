@@ -55,6 +55,29 @@ if (x) {
 }
 ```
 
+#### **🔶 Comment spacing**
+
+Add a single space after a double slash to increase readability.
+
+```js
+//no
+
+// yes
+```
+
+#### **❗ Spacing around operators**
+
+Use single spaces around binary and ternary operators.
+
+```js
+// no
+let x=3+4
+let x = 3  +  4  // (more than one space)
+
+// yes
+let x = 3 + 4
+```
+
 
 -------------------------------------------------------------------------------
 ### Naming Conventions
@@ -103,7 +126,7 @@ class MyClass {
 -------------------------------------------------------------------------------
 ### Semantics
 
-#### **Triple equals**
+#### **❗ Triple equals**
 
 Strict equality (===) over nonstrict (==).
 
@@ -118,12 +141,12 @@ if (x === '3') { ... }
 if (x.toString() === '3') { ... }
 ```
 
-#### **Prefer const**
+#### **❗ Use `const` for constants**
 
 If you don't need to reassign a variable, you should use `const` to declare it.
 You would be surprised how little you need to reassign variables.
 
-#### **"If you use `var`, you won't get very far; try to use `let`, it's a much safer bet"**
+#### **❗ "If you use `var`, you won't get very far; try to use `let`, it's a much safer bet"**
 
 Use `let` for mutable variables and `const` for constants (see previous).
 `var` leads to confusion and should be avoided in pretty much all circumstances.
@@ -135,7 +158,7 @@ Use `let` for mutable variables and `const` for constants (see previous).
 
 
 
-#### **Spacing**
+#### **❗ Spacing**
 
 `if`, space, condition, space, brace. The spaces are important.
 
@@ -160,16 +183,17 @@ if (x) {
 
 
 
-#### **Boolean equality comparisons**
+#### **❗ Boolean equality comparisons**
 
 Do not do unnecessary checks against a Boolean when you can just compare the value directly.
+A lot of students mess this up; you can really stand out by getting it right!
 
 ```js
 if (x === true) { ... }
 ```
 
 
-#### **Unnecessary ternaries**
+#### **❗ Unnecessary ternaries**
 
 Likewise, don't use a ternary where you can use a `||` operator.
 This happens when the condition of the ternary is the same as the value you are returning in the positive case.
@@ -206,15 +230,15 @@ x || 0
 
 ### Typing
 
-#### **Interfaces vs. types**
+#### **🔶 Interfaces vs. types**
 
-Prefer interfaces for object typing.
+We prefer interfaces for object typing.
 Type synonyms (i.e. what `type` introduces) can be pretty useful in certain cases,
 all this rule says is to *prefer* interfaces when specifying object types unless you have a good reason
 (say, an intersection type that's cleaner than `extend`ing an interface).
 
 
-#### **`any` typing**
+#### **‼️ `any` typing**
 
 The `any` type should **only** be used on a first draft of your code,
 as it essentially defeats the point of using TypeScript.
@@ -230,22 +254,22 @@ and inevitably some of those `any`s never go away.
 -------------------------------------------------------------------------------
 ## React
 
-#### **Component naming**
+#### **❗ Component naming**
 
 Components should be named with `PascalCase` (even if they are functions).
 
-#### **To bind or not to bind**
+#### **⁉️ To bind or not to bind**
 
 Once you start learning legacy React, you'll have to make a decision as to whether to use the "bind" technique or to write methods as arrow functions attached to the class with property initializers. Again: make the decision and be consistent.
 
 ### Organization
 
-#### **Nothing below `return` (a.k.a. don't foist the hoist)**
+#### **❗ Nothing below `return` (a.k.a. don't foist the hoist)**
 
 In a functional component, the `return` should be the last thing in the function.
 This amounts to: don't rely on hoisting inside your functional components.
 
-#### **Nothing below `render ()`**
+#### **❗ Nothing below `render ()`**
 
 Likewise, in a class component, the `render` method should be the last method in the class.
 This isn't a hoisting thing as much as a general practice that helps with readability.
