@@ -146,10 +146,12 @@ if (x.toString() === '3') { ... }
 If you don't need to reassign a variable, you should use `const` to declare it.
 You would be surprised how little you need to reassign variables.
 
-#### **❗ "If you use `var`, you won't get very far; try to use `let`, it's a much safer bet"**
+#### **❗ No `var` ever**
 
 Use `let` for mutable variables and `const` for constants (see previous).
 `var` leads to confusion and should be avoided in pretty much all circumstances.
+Remember that old saying:
+"if you use `var`, you won't get very far; try to use `let`, it's a much safer bet."
 
 
 
